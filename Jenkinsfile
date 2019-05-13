@@ -20,12 +20,11 @@
 //
 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 node("master"){
-  parameters {
-    string (
+  parameters {[
+     string (
       name: 'BuildEnv',
       default: 'QA',
       description: 'any'
-      
    ),
    choice(
      name: 'NodeJSVersion',
@@ -37,7 +36,8 @@ node("master"){
      default: '0.5.0',
      description:  'Which version to tag this with (e.g. image:${version}'
    )
-  }
+   
+  ] }
   def String giturl = "git@github.com:ten-peb/docker-ubuntu-nodejs.git"
   def String clone2 = 'docker-ubuntu-nodejs'
   def String image_base_tag = "ubuntu-nodejs-" + "${params.NodeJSVersion}"
