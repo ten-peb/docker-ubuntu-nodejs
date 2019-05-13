@@ -51,8 +51,10 @@ node("master"){
   stage("build image"){
     dir(clone2){
       def String image_tag = image_base_tag + ':' + image_version_tag;
-      doDockerBuild(image_tag)
-      doDockerBuild(image_base_tag + ':latest')
+      doDockerBuildArgs(image_tag,
+          ["NodeJSVersion=${parms.NodeNSVersion}"])
+      doDockerBuild(image_base_tag + ':latest',
+            ["NodeJSVersion=${parms.NodeNSVersion}]")
     }		 
   }
   // Brag about it.
