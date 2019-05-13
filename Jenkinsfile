@@ -1,10 +1,10 @@
 node("master"){
   parameters {
-    string {
+    string (
       name: 'BuildEnv',
       default: 'QA',
       description: 'any'
-   }
+   )
   }
   def String giturl = "git@github.com:ten-peb/docker-ubuntu-nodejs.git"
   def String clone2 = 'docker-ubuntu-nodejs'
