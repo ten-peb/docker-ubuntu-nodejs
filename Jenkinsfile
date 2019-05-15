@@ -54,7 +54,7 @@ node("master"){
       doDockerBuildArgs(image_tag,
           ["NodeJSVersion=${parms.NodeNSVersion}"])
       doDockerBuild(image_base_tag + ':latest',
-            ["NodeJSVersion=${parms.NodeNSVersion}]")
+            ["NodeJSVersion=${parms.NodeNSVersion}"])
     }		 
   }
   // Brag about it.
