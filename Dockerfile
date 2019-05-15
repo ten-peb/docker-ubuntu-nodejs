@@ -4,7 +4,7 @@ LABEL com.tenna.author = "Peter L. Berghold <pberghold@tenna.com>"
 LABEL com.tenna.description = "Ubuntu platform with NodeJS preinstalled"
 LABEL com.tenna.version     = "0.5.0"
 # Arguments begin here
-ARG NodeJSVersion = 11
+ARG NodeJSVersion=11
 # Enough Arguments!
 #
 # Update the OS, grab some essential tools to make all this work 
