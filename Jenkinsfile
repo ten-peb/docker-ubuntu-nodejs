@@ -53,9 +53,7 @@ node("master"){
     dir(clone2){
       def String image_tag = image_base_tag + ':' + image_version_tag;
       doDockerBuildArgs(image_tag,args)
-          
-      doDockerBuild(image_base_tag + ':latest')
-            )
+      doDockerBuildArgs(image_base_tag + ':latest',args)
     }		 
   }
   // Brag about it.
