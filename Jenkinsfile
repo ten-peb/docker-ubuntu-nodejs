@@ -68,6 +68,6 @@ node("master"){
     "Sincerely,",
     "Your faithful servant."," Jenkins"
     ]
-    sendEmail(qaTeam(),"ubuntu-nodejs-11 built",message.join("\n"))
+    sendEmail(qaTeam(),"${image_base_tag} built",message.join("\n"))
   }
 }
