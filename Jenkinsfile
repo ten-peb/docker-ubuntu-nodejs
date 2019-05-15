@@ -49,7 +49,7 @@ node("master"){
   }
   // Build the image
   stage("build image"){
-    String[] args = ["NodeJSVersion=${parms.NodeJSVersion}"]
+    String[] args = ["NodeJSVersion=${params.NodeJSVersion}"]
     dir(clone2){
       def String image_tag = image_base_tag + ':' + image_version_tag;
       doDockerBuildArgs(image_tag,args)
