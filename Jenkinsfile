@@ -39,8 +39,8 @@ node("master"){
    
   ] }
   def String giturl = "git@github.com:ten-peb/docker-ubuntu-nodejs.git"
-  def String clone2 = 'docker-ubuntu-nodejs'
-  def String image_base_tag = "ubuntu-nodejs-" + "${params.NodeJSVersion}"
+  def String clone2 = 'tenna-nodejs'
+  def String image_base_tag = "tenna/nodejs" 
   def String image_version_tag = "${params.ImageVersionTag}"
 
   // Grab the latest version from GitHub to "clone2" subdirectory to work on
