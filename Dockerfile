@@ -2,7 +2,7 @@ FROM tenna/ubuntu:latest
 LABEL com.tenna.vendor = "Tenna LLC"
 LABEL com.tenna.author = "Peter L. Berghold <pberghold@tenna.com>"
 LABEL com.tenna.description = "Ubuntu platform with NodeJS preinstalled"
-LABEL com.tenna.version     = "0.5.0"
+LABEL com.tenna.version     = "1.0.0"
 # Arguments begin here
 ARG NodeJSVersion=11
 # Enough Arguments!
@@ -15,7 +15,6 @@ RUN  export DEBIAN_FRONTEND=noninteractive && \
 
 
 # Grab the repository definitions for the correct version of NodeJS
-
 RUN curl -sL https://deb.nodesource.com/setup_${NodeJSVersion}.x | /bin/bash
 
 # Predefine the node userid
