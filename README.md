@@ -13,12 +13,12 @@ This container is intended to be a base container for end microservices.
 
 * NodeJS version 11   (by default) 
 * Yarn
-* Puppet agent
-* nagios-nrpe-agent
+* Puppet agent (inherited from tenna/ubuntu)
+* nagios-nrpe-agent (inherited from tenna/ubuntu)
 
 ## OS/Version
 
-Current OS is ubuntu/18.04 LTS
+Current OS is ubuntu/18.04 LTS   (tenna/ubuntu)
 
 
 ## Author: Peter L. Berghold <pberghold@tenna.com>
